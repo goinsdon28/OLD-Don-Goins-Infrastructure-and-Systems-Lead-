@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SQL Server Disaster Recovery | Don Goins</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+    <h1>SQL Server Disaster Recovery</h1>
+    
+    
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="star-stories/index.html">STAR Stories</a>
+            <a href="triage-journal/index.html">Triage Journal</a>
+            <a href="demos/game.html">Take a Break</a>
+        </nav>
+        
+</header>
+<div class="container">
+
+<section class="card">
+<h2>Overview</h2>
+<p>Recovered a failed SQL Server environment supporting production reporting and operational systems, restoring functionality under time-sensitive conditions.</p>
+</section>
+
+<section class="card">
+<h2>Failure Scenario</h2>
+<p>A critical SQL Server failure resulted in loss of SSRS reporting services and broken integrations with warehouse and operational systems.</p>
+</section>
+
+<section class="card">
+<h2>Recovery Approach</h2>
+<ul>
+<li>Restored ReportServer and ReportServerTempDB</li>
+<li>Reconfigured SSRS service and encryption-key dependencies</li>
+<li>Rebuilt database security mappings and permissions</li>
+<li>Reconnected application data sources</li>
+<li>Re-established linked-system connectivity between reporting and warehouse platforms</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Technical Work</h2>
+<p><strong>SSRS Restoration:</strong></p>
+<pre>Restore ReportServer
+Restore ReportServerTempDB
+Rebind encryption keys
+Validate service account permissions</pre>
+<p><strong>Linked-system rebuild:</strong></p>
+<pre>Re-establish provider configuration
+Restore connection mapping
+Validate authentication
+Test cross-system queries</pre>
+</section>
+
+<section class="card">
+<h2>Challenges</h2>
+<ul>
+<li>Encryption-key dependencies affecting SSRS</li>
+<li>Broken report data sources</li>
+<li>Permission mismatches across databases</li>
+<li>Cross-system dependency failures</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Impact</h2>
+<p>Restored reporting capability and system integrations while minimizing operational disruption.</p>
+<img src="images/ssrs-report.png" alt="SQL Server Reporting Services report" class="report-image">
+</section>
+
+<section class="card">
+<h2>Why This Matters</h2>
+<p>This work demonstrates recovery under pressure, dependency mapping, and business-continuity thinking across interconnected systems.</p>
+</section>
+
+<p class="back"><a href="index.html">← Return to main page</a></p>
+
+</div>
+<div class="footer">© 2026 Created by Don Goins — IT Systems & Infrastructure Specialist</div>
+</body>
+</html>

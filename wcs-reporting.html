@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WCS Production Reporting System | Don Goins</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+    <h1>WCS Production Reporting System</h1>
+    
+    
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="star-stories/index.html">STAR Stories</a>
+            <a href="triage-journal/index.html">Triage Journal</a>
+            <a href="demos/game.html">Take a Break</a>
+        </nav>
+        
+</header>
+<div class="container">
+
+<section class="card">
+<h2>Overview</h2>
+<p>
+Built a production-reporting pipeline that transformed raw warehouse-control-system log data
+into structured SQL Server reporting and SSRS dashboards.
+</p>
+</section>
+
+<section class="card">
+<h2>Architecture</h2>
+<ul>
+<li>WCS Logs → Parsed with Bash tools such as <code>grep</code> and <code>awk</code></li>
+<li>Structured export → Loaded into SQL Server</li>
+<li>SQL views → Normalization, aggregation, and comparison logic</li>
+<li>SSRS → Operational reporting layer</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Key Technique</h2>
+<p>15-minute interval bucketing was used to normalize event timestamps into consistent reporting windows.</p>
+<pre>DATEADD(MINUTE, DATEDIFF(MINUTE, 0, EVENT_DT)/15*15, 0)</pre>
+</section>
+
+<section class="card">
+<h2>Validation & Troubleshooting</h2>
+<p>
+The reporting work required comparing source data across systems, investigating duplicate or regenerated events,
+and validating whether differences represented real production activity or data-quality problems.
+</p>
+</section>
+
+<section class="card">
+<h2>Reporting Example</h2>
+<img src="images/ssrs-report.png" alt="Sanitized SQL Server Reporting Services production report" class="report-image">
+</section>
+
+<section class="card">
+<h2>Why This Matters</h2>
+<p>
+The project demonstrates end-to-end ownership from raw production data through extraction, database transformation,
+validation, and usable operational reporting.
+</p>
+</section>
+
+<p class="back"><a href="index.html">← Return to main page</a></p>
+
+</div>
+<div class="footer">© 2026 Created by Don Goins — IT Systems & Infrastructure Specialist</div>
+</body>
+</html>

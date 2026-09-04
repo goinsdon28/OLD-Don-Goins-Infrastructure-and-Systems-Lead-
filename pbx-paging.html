@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PBX & Paging Infrastructure | Don Goins</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+    <h1>PBX & Paging Infrastructure</h1>
+    
+    
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="star-stories/index.html">STAR Stories</a>
+            <a href="triage-journal/index.html">Triage Journal</a>
+            <a href="demos/game.html">Take a Break</a>
+        </nav>
+        
+</header>
+<div class="container">
+
+<section class="card">
+<h2>Overview</h2>
+<p>Designed and implemented a hybrid paging and voice system integrating VoIP PBX, IP paging devices, and analog amplification hardware to support facility-wide communication.</p>
+</section>
+
+<section class="card">
+<h2>Architecture</h2>
+<ul>
+<li>Cloud PBX → SIP paging extension</li>
+<li>IP paging adapter → SIP to analog audio</li>
+<li>Analog paging/amplification stack → Facility distribution</li>
+<li>Zone routing → Paging inputs and override connections</li>
+</ul>
+<p>This architecture allowed VoIP calls to trigger analog paging across multiple zones while preserving existing facility amplification infrastructure.</p>
+</section>
+
+<section class="card">
+<h2>Key Components</h2>
+<ul>
+<li>Algo SIP paging adapter</li>
+<li>Bogen paging interface and amplifiers</li>
+<li>GoTo Connect cloud PBX</li>
+<li>Tone-generation and paging-signaling components</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Implementation</h2>
+<ul>
+<li>Configured a SIP extension for paging</li>
+<li>Integrated the IP paging adapter with PBX credentials</li>
+<li>Connected paging output to the analog amplification path</li>
+<li>Configured multi-zone distribution</li>
+<li>Validated signaling, audio levels, and activation behavior</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Troubleshooting</h2>
+<ul>
+<li>Verified SIP registration and call routing</li>
+<li>Adjusted gain levels between IP and analog components</li>
+<li>Tested paging override behavior</li>
+<li>Validated signaling and zone delivery</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Impact</h2>
+<p>Delivered a reliable, scalable paging path integrating cloud voice infrastructure with existing production-floor communication hardware.</p>
+</section>
+
+<section class="card">
+<h2>Why This Matters</h2>
+<p>This project demonstrates cross-domain work spanning networking, VoIP, analog systems, and production infrastructure integration.</p>
+</section>
+
+<p class="back"><a href="index.html">← Return to main page</a></p>
+
+</div>
+<div class="footer">© 2026 Created by Don Goins — IT Systems & Infrastructure Specialist</div>
+</body>
+</html>
